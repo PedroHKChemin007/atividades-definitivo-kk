@@ -6,29 +6,35 @@ const prompt = require("prompt-sync")();
 console.log("digte os seus dois valores:");
 let numero1 = Number(prompt("--> "));
 let numero2 = Number(prompt("--> "));
-let resultsoma,resultsub,resultmul, resultdiv;
-let resutsoma = somar(numero1, numero2);
-let resutsub = subtrair(numero1, numero2);
-let resutmult = multiplicar(numero1, numero2);
-let resutdiv = dividir(numero1, numero2);
-function somar(num1, num2){
-    return resultsoma = num1 + num2;
 
-}
-function subtrair(num1, num2){
-    return resultsub =num1 - num2;
-}
-function multiplicar(num1, num2){
-    return resultmul = num1 * num2;
-}
-function dividir(num1, num2){
-    if (num1 > 0 || num2 > 0){
-        return resultdiv = num1 / num2;
-    } else {
-        return resultdiv = 0;
-    }
-}
+let resultsoma = somar(numero1, numero2);
+let resultsub = subtrair(numero1, numero2);
+let resultmult = multiplicar(numero1, numero2);
+let resultdiv = dividir(numero1, numero2);
+
 console.log(`Esse é o resultado da sua soma:${resultsoma}`);
 console.log(`Esse é o resultado da sua subtração:${resultsub}`);
-console.log(`Esse é o resultado da sua multiplicação:${resultmul}`);
+console.log(`Esse é o resultado da sua multiplicação:${resultmult}`);
 console.log(`Esse é o resultado da sua divisão:${resultdiv}`);
+
+
+
+
+
+
+function somar(num1, num2){
+    return num1 + num2;
+}
+function subtrair(num1, num2){
+    return num1 - num2;
+}
+function multiplicar(num1, num2){
+    return num1 * num2;
+}
+function dividir(num1, num2){
+    if (num2 !== 0){
+        return num1 / num2;
+    } else {
+        return 'Erro';
+    }
+}
